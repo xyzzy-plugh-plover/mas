@@ -12,7 +12,6 @@ defaults:
     shell: arch -arm64 /bin/zsh -Negku {0}
 jobs:
   release-published:
-    if: ${{!github.event.repository.fork}}
     runs-on: macos-15
     steps:
       - name: 🛒 Checkout repo
@@ -55,4 +54,5 @@ jobs:
            --online\
            --strict\
            --verbose\
+           --dry-run\
            mas

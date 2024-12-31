@@ -12,7 +12,6 @@ defaults:
     shell: arch -arm64 /bin/zsh -Negku {0}
 jobs:
   tag-pushed:
-    if: ${{!github.event.repository.fork}}
     runs-on: macos-15
     steps:
       - name: 🛒 Checkout repo

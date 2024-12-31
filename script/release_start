@@ -45,7 +45,7 @@ if [[ "${title}" = (' '*|*' ') ]]; then
   exit 4
 fi
 
-if ! git merge-base --is-ancestor "${ref}" upstream/main; then
+if ! git merge-base --is-ancestor "${ref}" origin/main; then
   printf $'\'%s\' is not a valid reference for a version, which must be on the upstream/main branch\n' "${ref}" >&2
   exit 5
 fi
@@ -54,4 +54,4 @@ git tag -s "${tag}" -m "${title}" "${ref}"
 
 printf $'Created version tag \'%s\' with title \'%s\' for \'%s\'\n\n' "${tag}" "${title}" "${ref}"
 
-git push upstream tag "${tag}"
+git push origin tag "${tag}"
