@@ -6,7 +6,8 @@ name: release-published
 on:
   release:
     types: [published]
-permissions: {}
+permissions:
+  contents: write
 defaults:
   run:
     # Force all run commands to not use Rosetta 2
