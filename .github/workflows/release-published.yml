@@ -6,7 +6,20 @@ name: release-published
 on:
   release:
     types: [published]
-permissions: write-all
+permissions:
+  actions: write
+  attestations: write
+  checks: write
+  contents: write
+  deployments: write
+  discussions: write
+  issues: write
+  packages: write
+  pages: write
+  pull-requests: write
+  repository-projects: write
+  security-events: write
+  statuses: write
 defaults:
   run:
     # Force all run commands to not use Rosetta 2
