@@ -10,3 +10,11 @@ updates:
     commit-message:
       prefix: ⬆️
       include: scope
+  - package-ecosystem: swift
+    directory: /
+    schedule:
+      interval: daily
+    labels: [📚 dependencies]
+    commit-message:
+      prefix: ⬆️
+      include: scope
