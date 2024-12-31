@@ -10,7 +10,6 @@ permissions:
   actions: write
   contents: write
   pull-requests: write
-  statuses: write
 defaults:
   run:
     # Force all run commands to not use Rosetta 2
