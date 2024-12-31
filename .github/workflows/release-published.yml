@@ -47,6 +47,7 @@ jobs:
         env:
           HOMEBREW_GITHUB_API_TOKEN: ${{github.token}}
         run: |
+          curl -X POST -H "Authorization: token ${HOMEBREW_GITHUB_API_TOKEN}" https://api.github.com/repos/Homebrew/homebrew-core/forks
           brew bump-formula-pr\
            --tag "${GITHUB_REF_NAME}"\
            --revision "${GITHUB_SHA}"\
